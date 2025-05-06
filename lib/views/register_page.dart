@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../services/auth_service.dart';
 import '../widgets/custom_textfield.dart';
-import 'home_page.dart';
+import 'product_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
         await _authService.register(_email.text.trim(), _pass.text.trim());
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (_) => const HomePage()),
+          MaterialPageRoute(builder: (_) => const ProductPage()),
         );
       } catch (e) {
         ScaffoldMessenger.of(
